@@ -63,16 +63,19 @@ const DeleteUser = (id)=>{
 
 //todo modificar un usuario existente
 
-const UpdateUser = (name, lastname,phone,email,sex)=> {
+const UpdateUser = (id,name, lastname,phone,email,sex)=> {
 
     let usuario = GetUserById(id);
+    //console.log(usuario)
 
         usuario.name = name
         usuario.lastname = lastname
         usuario.phone = phone
         usuario.email = email
         usuario.sex = sex
-
+        
+        // const actualizado = usuario.lastname
+        // console.log(actualizado);
 }
 
 module.exports = {UpdateUser,DeleteUser,AddUser,GetUserById,GetUser}

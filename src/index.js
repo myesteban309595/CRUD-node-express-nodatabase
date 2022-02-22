@@ -12,8 +12,8 @@ app.use(express.json()); //* convertir codigo maquina a json
 const usuarios = require('./routers/user.routers')
 const productos = require('./routers/products.routers') 
 
-app.use('/productos', productos)
-app.use('/usuarios', usuarios)
+app.use('/productos', productos);
+app.use('/usuarios', usuarios);
 
 //! *********************************************************
 

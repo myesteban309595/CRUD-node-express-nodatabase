@@ -6,8 +6,8 @@ const {UpdateUser,DeleteUser,AddUser,GetUserById,GetUser} = require('../models/u
 Uroute.get('/', (req,res)=> {
 
     res.json(GetUser())
-    console.log(("se han obtenido todos los usuarios ").bgCyan.black)
     console.log(GetUser());
+    console.log(("se han obtenido todos los usuarios ").bgCyan.black)
 })
 
 Uroute.post('/', (req, res) => {
@@ -25,8 +25,31 @@ Uroute.post('/', (req, res) => {
     AddUser(NewUser);
 
     res.json("se ha actualizado el usuario")
-    console.log(("se ha creado un nuevo usuario ").bgGreen.black);
     console.log(NewUser);
+    console.log(("se ha creado un nuevo usuario ").bgGreen.black);
 });
+
+Uroute.put('/:id', (req,res)=> {
+
+ const {name,lastname,phone,email,sex} = req.body;
+ const {id} = req.params
+
+ const productoAeditar = GetUserById(Number(id));
+ let validation = false;
+ 
+ if(id)
+ {
+     
+     console.log(("producto a editar").yellow);
+     console.log(productoAeditar);
+     UpdateUser(id,name,lastname,phone,email,sex)
+     validation = true;
+ }
+
+ validation ? res.json("se ha actualizado el usuario satisfactoriamente") : res.status(400).json("el usuario o id no existen")
+
+
+})
+
 module.exports = Uroute;
-//validacion ? res.json("se ha actualizado exitosamente el usuario") : res.status(400).json("el usuario o el id no existen");
+
