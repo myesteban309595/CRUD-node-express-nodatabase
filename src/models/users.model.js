@@ -52,12 +52,12 @@ const AddUser = (NewUser)=> {
 
 const DeleteUser = (id)=>{
 
-    let  usuario = GetUserById(id); //? capturo el usuario correspondiente a ese id
-    let indice = users.findIndex(usuario);
-
+    const  usuario = GetUserById(id); //? capturo el usuario correspondiente a ese id
+    
     if(usuario)
     {
-         users.splice(indice,1) ;
+        const Uindice = users.findIndex(i => i.id == id);
+        users.splice(Uindice,1) ;   
     }
 }
 
@@ -65,7 +65,7 @@ const DeleteUser = (id)=>{
 
 const UpdateUser = (id,name, lastname,phone,email,sex)=> {
 
-    let usuario = GetUserById(id);
+    const usuario = GetUserById(id);
     //console.log(usuario)
 
         usuario.name = name

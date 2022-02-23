@@ -57,6 +57,7 @@ const EditProduct = (id,name,price,category) => {
 
     const EditedProduct = GetProductsById(id)  //? capturo el producto por id
     
+    console.log(GetProductsById(id)); //! errorr no captura
     EditedProduct.name = name;
     EditedProduct.price = price;
     EditedProduct.category = category;
@@ -71,8 +72,8 @@ const DeleteProduct = (id) => {
     
     if(producto)
     {
-        const indice = products.findIndex( e => e.id == id)
-        products.splice(indice,1);
+        const Pindice = products.findIndex( e => e.id == id)
+        products.splice(Pindice,1);
         //products.splice(products.indexOf(producto),1);
     }
     //console.log(products);
