@@ -40,7 +40,7 @@ Uroute.put('/:id', (req,res)=> {
  {
      //console.log(name,lastname,phone,email,sex);  OK
      validation = true;
-     console.log(("usuario a editar").yellow);
+     console.log(("se ha editado el usuario: ").yellow);
      
      const productoAeditar = GetUserById(id);
      console.table(productoAeditar);

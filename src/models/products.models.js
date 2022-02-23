@@ -35,13 +35,13 @@ const GetProducts = ()=> {
 //todo obtener producto por id
 
 const GetProductsById = (id)=> {
-    return products.filter(product => product.id == id);
+    return products.find(product => product.id == id);
 }
 
 //todo obtener producto por nombre o coincidencia
 
 const GetProductsByName = (Buscar) => {
-    return products.filter(product => product.name.indexOf(Buscar) =! -1 );
+    return products.find(product => product.name.indexOf(Buscar) =! -1 );
 }
 
 //todo crear un nuevo producto
@@ -56,8 +56,8 @@ const PostProduct = (NewProduct)=>{
 const EditProduct = (id,name,price,category) => {
 
     const EditedProduct = GetProductsById(id)  //? capturo el producto por id
-    
-    console.log(GetProductsById(id)); //! errorr no captura
+    console.log(EditedProduct);
+    //console.log(GetProductsById(id)); //! errorr no captura
     EditedProduct.name = name;
     EditedProduct.price = price;
     EditedProduct.category = category;

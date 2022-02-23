@@ -55,14 +55,14 @@ Prouter.put('/:id', (req,res) => {
     {
         //console.log(name,price,category); OK
         validacion = true; //! valida que ya esta dentro del if osea que existe un id
-        console.log(("producto a editar").yellow);
+        console.log(("se ha editado el producto: ").yellow);
 
         const productoEditar = GetProductsById(id);
         console.table(productoEditar);
         console.log(("se ha editado un producto ").bgCyan.black);
 
 
-        EditProduct(name,price,category);
+        EditProduct(id,name,price,category);
 
     }
 

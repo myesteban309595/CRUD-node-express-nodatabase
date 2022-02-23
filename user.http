@@ -6,16 +6,16 @@ POST http://localhost:3000/usuarios
 content-Type: application/json
 
     {
-        "id": 3,
-        "name" : "ivan sebastian",
-        "lastname": "almeida valencia",
-        "phone": "3124589636",
-        "email" : "sebas@hotmail.com",
+        "id": 4,
+        "name" : "crstian javier",
+        "lastname": "esteban valencia",
+        "phone": "3004568978",
+        "email" : "cristian@hotmail.com",
         "sex": "M"
     }
 
 ###
-PUT http://localhost:3000/usuarios/2 HTTP/1.1
+PUT http://localhost:3000/usuarios/4 HTTP/1.1
 content-Type: application/json
 
     {
@@ -28,4 +28,4 @@ content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/usuarios/3 HTTP/1.1
+DELETE http://localhost:3000/usuarios/4 HTTP/1.1

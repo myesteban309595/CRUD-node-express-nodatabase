@@ -18,10 +18,10 @@ PUT http://localhost:3000/productos/2 HTTP/1.1
 content-Type: application/json
 
     {
-        "name": "coca cola",
-        "price": 2500,
-        "category" : "bebidas"
+        "name": "pollo",
+        "price": 8000,
+        "category" : "carnes frias"
     }
 
 ###
-DELETE http://localhost:3000/productos/3 HTTP/1.1
+DELETE http://localhost:3000/productos/5 HTTP/1.1

@@ -38,7 +38,7 @@ const GetUser = ()=> {
 //todo obtener usuario por id
 
 const GetUserById = (id)=>{
-   return users.filter(u => u.id == id)
+   return users.find(u => u.id == id)
 }
 
 //todo agregar nuevo usuario
@@ -63,10 +63,11 @@ const DeleteUser = (id)=>{
 
 //todo modificar un usuario existente
 
-const UpdateUser = (id,name, lastname,phone,email,sex)=> {
+const UpdateUser = (id,name,lastname,phone,email,sex)=> {
 
     const usuario = GetUserById(id);
-    //console.log(usuario)
+    console.log(usuario)
+    //console.log(usuario.name);
 
         usuario.name = name
         usuario.lastname = lastname
